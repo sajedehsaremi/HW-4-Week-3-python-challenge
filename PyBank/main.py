@@ -5,6 +5,9 @@ import csv
 # Set Path for files
 CSVpath = os.path.join("PyBank/Resources", "budget_data.csv")
 
+# Output files
+output_file = os.path.join("python-challenge", "PyBank", "Analysis_Summary.txt")
+
 
 # Create the empty lists for the following variables
 monthly_profit_change = []
@@ -12,7 +15,6 @@ monthly_profit_change = []
 # Open csv file
 with open("C:/Users/Sajedeh/personal-class/gt-atl-data-pt-06-2021-u-c/03-Python/02-Homework/Instructions/PyBank/Resources/budget_data.csv",newline="", encoding="utf-8") as budget:
 
-    
      # Creat the contents of budget_data.csv in the variable csvreader
     Budget = csv.reader(budget,delimiter=",") 
 

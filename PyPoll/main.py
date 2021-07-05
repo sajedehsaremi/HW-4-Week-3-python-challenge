@@ -6,7 +6,9 @@ from collections import Counter
 
 ## Set Path for files
 csvpath = os.path.join("PyPoll\Resources", "election_data.csv")
-# print(csvpath)
+
+# Summary Output files
+output_file = os.path.join("python-challenge", "PyPoll", "Analysis_Summary.txt")
 
 # Declare Variables 
 total_votes = 0 

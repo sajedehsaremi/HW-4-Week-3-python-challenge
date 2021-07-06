@@ -36,3 +36,14 @@ with open("C:/Users/Sajedeh/personal-class/gt-atl-data-pt-06-2021-u-c/03-Python/
     print("Average of the changes in Profit/Losses:", sum(profit)/len(profit))
     print("Greatest increase in Profit/Losses:", max(profit))
     print("Greatest decrease in Profit/Losses:", min(profit))
+    
+# Write the output in the text file
+    with open("C:/Users/Sajedeh/personal-class/HW-4-Week-3-python-challenge/HW-4-Week-3-python-challenge/PyBank/Analysis/PyBank_result.txt", 'w') as f:
+        print("Total number of months:", len(month), file=f)
+        print("-------------------------------", file=f)
+        for i in range(0, len(profit)):
+            profit[i] = int(profit[i])
+        print("Net total amount of Profit/Losses:", sum(profit),file=f)
+        print("Average of the changes in Profit/Losses:", sum(profit)/len(profit),file=f)
+        print("Greatest increase in Profit/Losses:", max(profit),file=f)
+        print("Greatest decrease in Profit/Losses:", min(profit),file=f)

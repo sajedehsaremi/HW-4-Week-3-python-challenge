@@ -49,3 +49,12 @@ with open("C:/Users/Sajedeh/personal-class/gt-atl-data-pt-06-2021-u-c/03-Python/
 
     Winner = max(Candidate_count, key=Candidate_count.get)
     print( "The winner of the election is " , Winner, "!")
+    
+    #  Write the output in the text file
+    with open('C:/Users/Sajedeh/personal-class/HW-4-Week-3-python-challenge/HW-4-Week-3-python-challenge/PyPoll/Analysis/PyPoll_result.txt', 'w') as f:
+        print("Total number of votes:", len(VoterID), file=f)
+        print("A complete list of candidates who received votes", Candidate_count.keys(),file=f)
+        for key, value in Candidate_count.items():
+            print("The percentage of votes for candidate", key, "is", (100 * value)/len(Candidate), "%", "which  is equal to" , value, " number of votes",file=f)
+        Winner = max(Candidate_count, key=Candidate_count.get)
+        print( "The winner of the election is " , Winner,file=f)
